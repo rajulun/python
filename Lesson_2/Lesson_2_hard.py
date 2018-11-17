@@ -28,7 +28,7 @@ def hard_1():
  # hard_1()
  #
 # Задача-2 Пользователь вводит два текста, необходимо найти все слова, которые есть в обоих текстах. Без учета регистра
-def del_dupl_words(l):
+def del_dupl_words(l): # Удаляем из первой строки дубликаты слов
     n = []
     for i in l.split():
         if i not in n:
@@ -37,19 +37,22 @@ def del_dupl_words(l):
 def hard_2():
     txt_1 = input("Введите текст: ")
     txt_2 = input("Введите другой текст: ")
-    # txt_1 = txt_1.split()
+    # txt_1 = ("Введите текст ret ypo flt bgt gdg dfhd dfhd flt flt")
+    # txt_2 = ("Введите другой текст ypo flt gfdg dfgd gdfgdf fgdf  ")
+
     txt_1 = del_dupl_words(txt_1)
+    # print(txt_1)
     txt_2 = txt_2.split()
     i = 0
-    samewords = ''
+    samewords = {''}
+    samewords.clear()
     while i < len(txt_1):
         ii = 0
         while ii < len(txt_2):
             # print(txt_1[i], txt_2[ii])
             if txt_1[i].lower() == txt_2[ii].lower():
-                samewords = samewords + ", " + txt_2[ii]
+                samewords.add(txt_2[ii])
                 ii = len(txt_2)
-                # print(txt_2[ii], samewords)
             ii += 1
         i += 1
     print("Слова присутствующие в обоих текстах:", samewords)
@@ -68,4 +71,7 @@ while answer.lower() != 'n':
         elif do == 2:
             hard_2()
         else:
-            print("Пожалуйста, выберите 1 или 2!") 
+            print("Пожалуйста, выберите 1 или 2!")
+
+
+
