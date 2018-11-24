@@ -30,6 +30,7 @@ print([i for i in frukt_1 if i in frukt_2] )
 # + Элемент кратен 3
 # + Элемент положительный
 # + Элемент не кратен 4
+#
 
 spisok_2 = [2, 4, -5, 3, 6, -7, 1, 9, 8, 12, 18]
 print( [i for i in spisok_2  if i >= 0 and not i % 3 and i % 4])
