@@ -58,7 +58,7 @@ def you_move():
                     l.pop(l.index(ball))
                 except ValueError:
                     continue
-            print('\nKONEM HODI')
+            print('\nNEXT SET')
             return 1
         else:
             print('\nGAME OVER')
@@ -68,8 +68,7 @@ def you_move():
             print('\nGAME OVER')
             sys.exit()
         else:
-            print('\nKONEM HODI')
-
+            print('\nNEXT SET')
 
 
 def com_move():
