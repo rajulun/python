@@ -102,4 +102,3 @@ for ball in balls:
     if ballsleft == 0:
         print('\nGAME OVER')
         sys.exit()
-#
